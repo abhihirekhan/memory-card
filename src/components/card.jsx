@@ -1,28 +1,18 @@
 import React from "react";
-import characters from "./characters";
 
-function Card() {
+function Card({ characters, handleClick }) {
   return (
     <div className="spacingDiv">
       <div className="cardArea">
-        {" "}
         {characters.map((character) => (
           <button
+            onClick={() => handleClick(character.cardTitle)}
             className="cardButton"
             id={character.cardTitle}
             key={character.cardTitle}
           >
-            {" "}
-            <div
-              className="characterCard"
-              id={character.cardTitle}
-              key={character.cardTitle}
-            >
-              <img
-                className="characterImg"
-                src={character.cardImg}
-                alt={character.cardTitle}
-              />
+            <div className="characterCard" id={character.cardTitle} key={character.cardTitle}>
+              <img className="characterImg" id={character.cardTitle} src={character.cardImg} alt={character.cardTitle} />
               <h1 className="roleName">{character.cardTitle}</h1>
             </div>
           </button>

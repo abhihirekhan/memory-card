@@ -21,6 +21,13 @@ body{
     height: 300px;
     background-image: linear-gradient( rgb(180, 175, 175), black, rgb(180, 175, 175));
 }
+.characterCard:hover{
+    transform: scale(1.1);
+    transition: .25s;
+    background-color: aqua;
+
+
+}
 .characterImg{
     height: 75%;
     width: auto;
@@ -34,6 +41,8 @@ body{
 .cardButton{
     background-color: transparent;
     border: none;
+    height: 100%;
+    width:100%;
 }
 
 .roleName{
