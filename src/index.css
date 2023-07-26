@@ -1,86 +1,175 @@
-body{
-    background-image: url("./images/background/eldenRingBackground.jpg");
-   
-    background-repeat: no-repeat;
-    /* background-size:cover; */
-}
-.headerName{
-    background-image: url("./images/logo/Elden-Ring-Logo-PNG-Image.png");
-    height: 14vh;
-    width: 500px;
-    background-repeat: no-repeat;
-}
-.characterCard{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    border: 5px solid ;
-    border-radius: 10px;
-    width: 200px;
-    height: 300px;
-    background-image: linear-gradient( rgb(180, 175, 175), black, rgb(180, 175, 175));
-}
-.characterCard:hover{
-    transform: scale(1.1);
-    transition: .25s;
-    background-color: aqua;
+body {
+  background-image: url("./images/background/eldenRingBackground.jpg");
 
 
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.characterImg{
-    height: 75%;
-    width: auto;
-}
-.cardArea{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap:6em;
+*{
+    font-family: 'Cormorant Garamond', serif;
     
 }
-.cardButton{
-    background-color: transparent;
-    border: none;
-    height: 100%;
-    width:100%;
+.headerName {
+  background-image: url("./images/logo/Elden-Ring-Logo-PNG-Image.png");
+  height: 14vh;
+  width: 500px;
+  background-repeat: no-repeat;
+  
+}
+.characterCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 5px solid;
+  border-radius: 10px;
+  width: 200px;
+  height: 300px;
+  background-image: linear-gradient(
+    rgb(180, 175, 175),
+    black,
+    rgb(180, 175, 175)
+  );
+}
+.characterCard:hover {
+  transform: scale(1.1);
+  transition: 0.25s;
+  background-color: aqua;
+}
+.characterImg {
+  height: 75%;
+  width: auto;
+  
+}
+.cardArea {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 6em;
+}
+.cardButton {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  width: 100%;
 }
 
-.roleName{
-    background-color: rgb(41, 39, 39);
-    color:rgb(209, 190, 83);
-    width: 100%;
-    text-align: center;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    
+.roleName {
+  background-color: rgb(41, 39, 39);
+  color: rgb(209, 190, 83);
+  width: 100%;
+  text-align: center;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
-.spacingDiv{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+.spacingDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.headerArea{
-  display:grid;
+.headerArea {
+  display: grid;
   grid-template-columns: 1fr 1fr;
   color: goldenrod;
   align-items: center;
-    justify-content: space-between;
-    gap: 10em;
-    
+  justify-content: space-between;
+  gap: 10em;
+  padding-bottom: 2em;
 }
 
-.scoreBoard{
-    display: flex;
-    gap:15em;
+.scoreBoard {
+  display: flex;
+  gap: 10em;
+  font-size: 2em;
 }
 
-.wholePage{
-    display: flex;
-    flex-direction: column;
+.wholePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.popUps {
+  margin: 0;
+}
+.winPopUp {
+  display: none;
+  color: rgb(209, 190, 83);
+  text-shadow: 2px 2px rgba(255, 255, 255, 0.521) ;
+  background-color: black;
+  background-image: url("./images/winLose/youWinReal.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 50px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: -8px;
+  
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.winPop {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  bottom: 3.3em;
+  right: 1em;
+  width: 11em;
+  height: 4em;
+  text-align: center;
+}
+.winText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.playAgainWin {
+  background-color: rgb(209, 190, 83);
+  color: white;
+  background-image: url("./images/icons/reset.png");
+  background-size: cover;
+  height: 4em;
+  width:4em;
+    background-repeat: no-repeat;
+    display:flex;
     align-items: center;
     justify-content: center;
     
-   
+}
+.playAgainLose{
+    background-color: red;
+    color: white;
+    background-image: url("./images/icons/reset.png");
+    background-size: cover;
+    height: 4em;
+    width:4em;
+      background-repeat: no-repeat;
+      display:flex;
+      align-items: center;
+      justify-content: center;  
+}
+.losePopUp {
+    display: none;
+    color: red;
+    text-shadow: 2px 2px rgba(255, 255, 255, 0.521) ;
+    background-color: black;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 300px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: -8px;
+    font-family: 'Cormorant Garamond', serif;
+    justify-content: center;
+    align-items: center;
+    
+    font-weight: ;
+}
+.loseText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

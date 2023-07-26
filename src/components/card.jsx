@@ -12,7 +12,7 @@ function Card({ characters, handleClick }) {
             key={character.cardTitle}
           >
             <div className="characterCard" id={character.cardTitle} key={character.cardTitle}>
-              <img className="characterImg" id={character.cardTitle} src={character.cardImg} alt={character.cardTitle} />
+              <img className="characterImg" draggable="false" id={character.cardTitle} src={character.cardImg} alt={character.cardTitle} />
               <h1 className="roleName">{character.cardTitle}</h1>
             </div>
           </button>
