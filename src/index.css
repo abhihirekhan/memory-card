@@ -1,20 +1,20 @@
 body {
   background-image: url("./images/background/eldenRingBackground.jpg");
 
-
+  background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
 }
-*{
-    font-family: 'Cormorant Garamond', serif;
-    
+* {
+  font-family: "Cormorant Garamond", serif;
 }
 .headerName {
   background-image: url("./images/logo/Elden-Ring-Logo-PNG-Image.png");
   height: 14vh;
-  width: 500px;
+  width: 30em;
   background-repeat: no-repeat;
-  
+  position: relative;
+  right: 3em;
 }
 .characterCard {
   display: flex;
@@ -23,13 +23,9 @@ body {
   justify-content: space-between;
   border: 5px solid;
   border-radius: 10px;
-  width: 200px;
-  height: 300px;
-  background-image: linear-gradient(
-    rgb(180, 175, 175),
-    black,
-    rgb(180, 175, 175)
-  );
+  width: 14em;
+  height: 23em;
+  background-image: linear-gradient(rgb(180, 175, 175), black, rgb(92, 83, 36));
 }
 .characterCard:hover {
   transform: scale(1.1);
@@ -39,7 +35,6 @@ body {
 .characterImg {
   height: 75%;
   width: auto;
-  
 }
 .cardArea {
   display: grid;
@@ -95,7 +90,7 @@ body {
 .winPopUp {
   display: none;
   color: rgb(209, 190, 83);
-  text-shadow: 2px 2px rgba(255, 255, 255, 0.521) ;
+  text-shadow: 2px 2px rgba(255, 255, 255, 0.521);
   background-color: black;
   background-image: url("./images/winLose/youWinReal.jpg");
   background-repeat: no-repeat;
@@ -105,7 +100,7 @@ body {
   height: 100%;
   width: 100%;
   margin: -8px;
-  
+
   justify-content: flex-end;
   align-items: flex-end;
 }
@@ -130,46 +125,178 @@ body {
   background-image: url("./images/icons/reset.png");
   background-size: cover;
   height: 4em;
-  width:4em;
-    background-repeat: no-repeat;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    
+  width: 4em;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.playAgainLose{
-    background-color: red;
-    color: white;
-    background-image: url("./images/icons/reset.png");
-    background-size: cover;
-    height: 4em;
-    width:4em;
-      background-repeat: no-repeat;
-      display:flex;
-      align-items: center;
-      justify-content: center;  
+.playAgainLose {
+  background-color: red;
+  color: white;
+  background-image: url("./images/icons/reset.png");
+  background-size: cover;
+  height: 4em;
+  width: 4em;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .losePopUp {
-    display: none;
-    color: red;
-    text-shadow: 2px 2px rgba(255, 255, 255, 0.521) ;
-    background-color: black;
-    
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-size: 300px;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    margin: -8px;
-    font-family: 'Cormorant Garamond', serif;
-    justify-content: center;
-    align-items: center;
-    
-    font-weight: ;
+  display: none;
+  color: red;
+  text-shadow: 2px 2px rgba(255, 255, 255, 0.521);
+  background-color: black;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 300px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: -8px;
+  font-family: "Cormorant Garamond", serif;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: ;
 }
-.loseText{
+.loseText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.musicArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1em;
+}
+.musicButton {
+  background-color: rgb(168, 146, 22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+@media (orientation: portrait) and (max-width: 780px) {
+  .cardArea {
+    display: grid;
+
+    grid-template-columns: 1fr  1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 0.1px;
+  }
+  .losePopUp {
+    font-size: 150px;
+    text-align: center;
+  }
+  .winPopUp {
+    font-size: 45px;
+    text-align: center;
+    position: relative;
+    top: 6em;
+    left: 1em;
+    background-image: none;
+  }
+  .winText {
+    height: 900px;
+    background-color: black;
+    margin: 0;
+    width: 400px;
+    position: relative;
+    left: 0.1em;
+  }
+  .popUps {
+    background-color: black;
+  }
+  .headerArea {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 0.1em;
+  }
+  .scoreBoard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.1em;
+  }
+  .headerName {
+    background-size: 80%;
+    width: px;
+    height: 10vh;
+    position: relative;
+    left: 3em;
+  }
+  .characterCard {
+    width: 150px;
+    height: 200px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1024px) {
+  .cardArea {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+  }
+  .losePopUp {
+    font-size: 150px;
+    text-align: center;
+  }
+  .winPopUp {
+    font-size: 45px;
+    text-align: center;
+    position: relative;
+    top: 6em;
+    left: 1em;
+    background-image: none;
+  }
+  .winText {
+    height: 900px;
+    background-color: black;
+    margin: 0;
+    width: 400px;
+    position: relative;
+    left: 0.1em;
+  }
+  .popUps {
+    background-color: black;
+  }
+  .headerArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.1em;
+  }
+  .scoreBoard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    height: 0.1em;
+  }
+  .headerName {
+    background-image: none;
+    width: px;
+    height: 1.75vh;
+    position: relative;
+    left: 3em;
+  }
+  .characterCard {
+    width: 120px;
+    height: 180px;
+  }
 }
